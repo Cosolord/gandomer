@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>GANDOSEARCH</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+    <link rel="icon" type="image/x-icon" href="gm-logo.ico" />
+
+    <style>
+      body {
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      // Array di URL delle immagini di sfondo
+      var backgroundImages = ['gm.jpeg', 'gm2.jpeg'];
+
+      // Seleziona casualmente un'immagine di sfondo dall'array
+      var randomIndex = Math.floor(Math.random() * backgroundImages.length);
+      var randomBackgroundImage = backgroundImages[randomIndex];
+
+      // Imposta l'immagine di sfondo per il body
+      document.body.style.backgroundImage = "url('" + randomBackgroundImage + "')";
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <span class="navbar-brand mb-0 h1 animate__bounce">GANDOSEARCH</span>
+      <span class="navbar-text">Il motore per le ricerche di BJ e TB</span>
+
+      <div class="navbar-collapse justify-content-end" id="navbarSupportedContent">
+        <button id="startButton" onclick="startSearch()" class="btn btn-primary btn-lg ml-2">Avvia Ricerca</button>
+      </div>
+    </nav>
+
+    <audio id="audio" src="gm.mp3"></audio>
+
+    <script src="script.js"></script>
+  </body>
+</html>
